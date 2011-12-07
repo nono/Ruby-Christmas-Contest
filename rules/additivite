@@ -1,0 +1,7 @@
+commit = 1
+commit = 2
+commit += 3
+followers = 1
+followers += 2
+followers = 5
+repository += 5

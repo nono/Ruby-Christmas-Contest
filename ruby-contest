@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+data, code = eval(File.read "profil"), File.read(ARGV.first)
+commits = followers = score = 0
+class Fixnum
+  def watchers; $repo["watchers"]; end
+  def forks; $repo["forks"]; end
+end
+data["repositories"].each do |repo|
+  repository, $repo = 0, repo
+  eval code
+  score += repository
+end
+puts score + data["commits"] * commits + data["followers"] * followers
