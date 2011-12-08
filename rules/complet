@@ -1,4 +1,4 @@
-followers = 2
+follower = 2
 repository = 1 if repository.watchers  < 2 && repository.forks < 2
 repository = 5
 repository += 10 if repository.watchers  > 10
